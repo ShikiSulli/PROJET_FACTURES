@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FACTURATION</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="./factures.css" />
+  </head>
+
+  <body>
+    <h1>Système de Gestion de Factures</h1>
+
+    <div id="msg" class="msg"></div>
+
+    <div id="createMessage" class="message"></div>
+
+    <div id="modificationMessage" class="message"></div>
+
+    <div id="deleteMessage" class="message delete-message"></div>
+
+    <div id="wrapper">
+      <h2>Créer une facture</h2>
+      <form id="invoiceForm">
+        <input
+          type="text"
+          id="invoiceNumber"
+          placeholder="Numéro de facture"
+          required
+        />
+        <input
+          type="text"
+          id="clientName"
+          placeholder="Nom du client"
+          required
+        />
+        <input
+          type="email"
+          id="clientEmail"
+          placeholder="Email du client"
+          required
+        />
+        <input type="date" id="invoiceDate" required />
+        <input
+          type="number"
+          id="invoiceAmount"
+          placeholder="Prix de la facture"
+          required
+        />
+        <button id="createInvoice">Créer</button>
+      </form>
+    </div>
+
+    <button id="showInvoices">Afficher les factures</button>
+
+    <script src="factures.js"></script>
+  </body>
+</html>
